@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/_10sdp">
+
+    <TextView
+        android:id="@+id/txtNoteTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Note Title"/>
+
+    <EditText
+        android:id="@+id/edtNoteTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtNoteTitle"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:background="@drawable/rectangle"
+        android:inputType="text"
+        android:hint="Title"
+        android:padding="@dimen/_10sdp" />
+
+    <TextView
+        android:id="@+id/txtNoteDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edtNoteTitle"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:text="Note Description" />
+
+    <EditText
+        android:id="@+id/edtNoteDescription"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_100sdp"
+        android:layout_below="@id/txtNoteDescription"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:background="@drawable/rectangle"
+        android:gravity="top"
+        android:inputType="textImeMultiLine"
+        android:imeOptions="actionDone"
+        android:hint="Description"
+        android:padding="@dimen/_10sdp" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edtNoteDescription"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="@dimen/_10sdp">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnCancelNote"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cancel"
+            app:cornerRadius="@dimen/_20sdp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnAddNote"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/btnCancelNote"
+            android:layout_marginStart="@dimen/_50sdp"
+            android:text="Add"
+            app:cornerRadius="@dimen/_20sdp" />
+    </RelativeLayout>
+
+</RelativeLayout>

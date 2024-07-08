@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/_7ssp">
+
+    <TextView
+        android:id="@+id/txtTodoNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/txtToDoTitle"
+        android:layout_alignBottom="@id/txtTodoText"
+        android:layout_margin="@dimen/_5ssp"
+        android:textSize="@dimen/_13ssp"
+        android:textStyle="bold"
+        tools:text="1" />
+
+    <TextView
+        android:id="@+id/txtToDoTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_5ssp"
+        android:layout_toEndOf="@id/txtTodoNumber"
+        android:text="TITLE"
+        android:textSize="@dimen/_15ssp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/txtTodoText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtToDoTitle"
+        android:layout_marginStart="@dimen/_5ssp"
+        android:layout_toStartOf="@id/imgDeleteButton"
+        android:layout_toEndOf="@id/txtTodoNumber"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:textSize="@dimen/_12ssp"
+        tools:text="Create a menu directory and then add a new resource file in the menu for the popup menu. To create a menu in Android Studio please refer to here. Here we need to add the item that we need to show in the menu.  " />
+
+    <ImageView
+        android:id="@+id/imgEditButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:src="@drawable/baseline_edit_24" />
+
+
+    <ImageView
+        android:id="@+id/imgDeleteButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imgEditButton"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="@dimen/_6sdp"
+        android:src="@drawable/baseline_delete_24" />
+</RelativeLayout>

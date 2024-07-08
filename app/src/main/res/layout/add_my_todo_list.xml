@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/_10sdp">
+
+    <TextView
+        android:id="@+id/txtTododTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ToDo Title"/>
+
+    <EditText
+        android:id="@+id/edtTodoTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtTododTitle"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:inputType="text"
+        android:background="@drawable/rectangle"
+        android:hint="Title"
+        android:padding="@dimen/_10sdp" />
+
+    <TextView
+        android:id="@+id/txtTodoDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edtTodoTitle"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:text="ToDo Description" />
+
+    <EditText
+        android:id="@+id/edtTodoDescription"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_100sdp"
+        android:layout_below="@id/txtTodoDescription"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:background="@drawable/rectangle"
+        android:gravity="top"
+        android:inputType="textImeMultiLine"
+        android:imeOptions="actionDone"
+        android:hint="Description"
+        android:padding="@dimen/_10sdp" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edtTodoDescription"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="@dimen/_10sdp">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnCancelTodo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cancel"
+            app:cornerRadius="@dimen/_20sdp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnAddTodo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/btnCancelTodo"
+            android:layout_marginStart="@dimen/_50sdp"
+            android:text="Add"
+            app:cornerRadius="@dimen/_20sdp" />
+    </RelativeLayout>
+
+</RelativeLayout>

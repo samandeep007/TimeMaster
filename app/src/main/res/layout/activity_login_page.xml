@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginPage">
+<androidx.core.widget.NestedScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+    <ImageView
+        android:id="@+id/imgClock"
+        android:layout_width="@dimen/_70sdp"
+        android:layout_height="70sp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100sp"
+        android:src="@drawable/clock" />
+
+    <TextView
+        android:id="@+id/txtTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imgClock"
+        android:layout_centerHorizontal="true"
+        android:text="@string/app_name"
+        android:textSize="@dimen/_25ssp"
+        android:textStyle="bold" />
+
+
+    <TextView
+        android:id="@+id/txtSignInText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtTitle"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/_30ssp"
+        android:text="@string/sign_in_to_continue"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_15ssp" />
+
+    <TextView
+        android:id="@+id/txtNameText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtSignInText"
+        android:layout_marginStart="@dimen/_50ssp"
+        android:layout_marginTop="@dimen/_20ssp"
+        android:text="@string/nameText"
+        android:textSize="@dimen/_13ssp" />
+
+
+    <EditText
+        android:id="@+id/edtName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtNameText"
+        android:layout_marginStart="@dimen/_50sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginEnd="@dimen/_50sdp"
+        android:background="@drawable/rectangle"
+        android:inputType="text"
+        android:hint="@string/name"
+        android:padding="@dimen/_10sdp" />
+
+    <TextView
+        android:id="@+id/txtPasswordText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edtName"
+        android:layout_marginStart="@dimen/_50ssp"
+        android:layout_marginTop="@dimen/_20ssp"
+        android:text="@string/password"
+        android:textSize="@dimen/_13ssp" />
+
+    <EditText
+        android:id="@+id/edtPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtPasswordText"
+        android:layout_marginStart="@dimen/_50sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginEnd="@dimen/_50sdp"
+        android:background="@drawable/rectangle"
+        android:hint="@string/hash"
+        android:imeOptions="actionDone"
+        android:inputType="textPassword"
+        android:padding="@dimen/_10sdp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edtPassword"
+        android:layout_centerHorizontal="true"
+        android:textSize="@dimen/_13sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:backgroundTint="@color/black"
+        android:paddingStart="@dimen/_25sdp"
+        android:paddingTop="@dimen/_10sdp"
+        android:paddingEnd="@dimen/_25sdp"
+        android:textAllCaps="false"
+        android:textStyle="bold"
+        android:paddingBottom="@dimen/_10sdp"
+        android:text="@string/login"
+        android:theme="@style/BUTTON.BLACK"
+        app:cornerRadius="@dimen/_20sdp" />
+
+    <RelativeLayout
+        android:id="@+id/layoutNewUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnLogin"
+        android:layout_centerHorizontal="true">
+
+        <TextView
+            android:id="@+id/txtNewUser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_30ssp"
+            android:text="Don't have an account?"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_15ssp" />
+
+        <TextView
+            android:id="@+id/txtRegisterNow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_30ssp"
+            android:layout_toEndOf="@id/txtNewUser"
+            android:text="Sign Up "
+            android:layout_marginStart="@dimen/_5ssp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_15ssp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    </RelativeLayout>
+</androidx.core.widget.NestedScrollView>
+</RelativeLayout>

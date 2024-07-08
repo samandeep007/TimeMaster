@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.ToDo">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/txtMyTodo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:text="My To-Do List"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_14ssp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btnMyToDo"
+                android:layout_width="@dimen/_45sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="@dimen/_20sdp"
+                app:cornerRadius="@dimen/_20sdp"
+                app:icon="@drawable/baseline_add_24"
+                app:iconGravity="start" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewMyTodoList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtMyTodo"
+                tools:itemCount="3"
+                tools:listitem="@layout/list_upcoming_events" />
+
+            <TextView
+                android:id="@+id/txtMyNotes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/recyclerViewMyTodoList"
+                android:layout_marginStart="@dimen/_5ssp"
+                android:layout_marginTop="6dp"
+                android:layout_marginEnd="@dimen/_5ssp"
+                android:layout_marginBottom="@dimen/_5ssp"
+                android:text="My Notes"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_14ssp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btnMyNotes"
+                android:layout_width="@dimen/_45sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_below="@id/recyclerViewMyTodoList"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="@dimen/_20sdp"
+                app:cornerRadius="@dimen/_20sdp"
+                app:icon="@drawable/baseline_add_24"
+                app:iconGravity="start" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewMyNotes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtMyNotes"
+                android:layout_margin="@dimen/_5sdp" />
+
+        </RelativeLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</RelativeLayout>
